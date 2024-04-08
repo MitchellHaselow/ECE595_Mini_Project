@@ -9,8 +9,6 @@ from multiprocessing import Pool
 input_path = 'test'
 output_path = 'test_processed'
 
-# for img_id in os.listdir('train_small'):
-
 def img_id_to_processed_img(img_id):
     try:
         detected_aligned_face = DeepFace.extract_faces(img_path = input_path + '/' + img_id, detector_backend = 'ccv', target_size=(160, 160))
